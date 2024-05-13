@@ -12,7 +12,7 @@ function App() {
 
   // Fetch the data and reset the state
   useEffect(() => {
-    fetch("http://localhost:3000/musicDB")
+    fetch("https://musicdb.onrender.com/musicDB")
       .then((res) => res.json())
       .then((data) => {
         setMusic(data);
@@ -23,7 +23,7 @@ function App() {
 
   // handling the save feature
   function handleSave(song) {
-    fetch(`http://localhost:3000/musicDB/${song.id}`, {
+    fetch(`https://musicdb.onrender.com/musicDB/${song.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function App() {
         isSaved: !song.isSaved,
       }),
     });
-    fetch("http://localhost:3000/savedsongs", {
+    fetch("https://musicdb.onrender.com/savedsongs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

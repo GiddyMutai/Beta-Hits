@@ -6,16 +6,16 @@ export default function SavedSongs() {
   const [savedSongs, setSavedSongs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/savedsongs")
+    fetch("https://musicdb.onrender.com/savedsongs")
     .then((res) => res.json())
     .then((data) => setSavedSongs(data))
   }, [])
 
   function handleDelete(song) {
-    fetch(`http://localhost:3000/savedsongs/${song.id}`, {
+    fetch(`https://musicdb.onrender.com/savedsongs/${song.id}`, {
       method: 'DELETE',
     })
-    fetch(`http://localhost:3000/musicDB/${song.id}`, {
+    fetch(`https://musicdb.onrender.com/musicDB/${song.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

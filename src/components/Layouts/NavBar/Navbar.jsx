@@ -18,7 +18,6 @@ function Navbar({ setFilteredMusic, music }) {
           type="text"
           className="search-input"
           placeholder="Search for music..."
-          onChange={(e) => onHandleSearch(e.target.value)}
         />
         <button className="search-btn" type="button" onClick={handleSearch} >
           Search
