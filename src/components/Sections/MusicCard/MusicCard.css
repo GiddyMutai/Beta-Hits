@@ -14,3 +14,8 @@
     background: rgb(251,0,108);
     background: linear-gradient(90deg, rgba(251,0,108,1) 24%, rgba(0,0,0,1) 49%);
 }
+
+.song-container:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
